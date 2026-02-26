@@ -2,34 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
- public function index()
-{
-    require_once app_path('data/data.php');
-
-    global $categories, $config; // <--- هاد السطر مهم
-
-    return view('index', [
-        'categories' => $categories,
-        'config' => $config
-    ]);
-}
-    public function contact()
-    {
-        return view('contact');
+    function index(){
+        return view('index');
     }
-
-    public function cgv()
-    {
-        require app_path('data/data.php');
-
-        global $categories, $config; 
-
-        return view('cgv', [
-            'cgv' => $cgv
-        ]);
+     function contact(){
+        require(base_path("Data/data.php"));
+        return view('contact',["data"=> $config]);
+    }
+     function cgv(){
+        require(base_path("Data/data.php"));
+        return view('cgv',["cgv"=>$cgv]);
     }
 }

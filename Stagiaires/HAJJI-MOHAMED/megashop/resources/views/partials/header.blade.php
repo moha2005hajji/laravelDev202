@@ -1,12 +1,15 @@
-<header>
-
-<h1>{{ $config['company']['name'] }}</h1>
-
-<nav>
-<a href="{{ route('home') }}">Accueil</a>
-<a href="{{ route('categories') }}">Categories</a>
-<a href="{{ route('contact') }}">Contact</a>
-<a href="{{ route('cgv') }}">CGV</a>
-</nav>
-
-</header>
+ <header>
+        <div class="header-content">
+            <div class="logo">MegaShop</div>
+            <nav>
+                <ul>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/categorie/informatique">Informatique</a></li>
+                    <li><a href="/categorie/petit_electromenager">Petit Électroménager</a></li>
+                    <li><a href="/categorie/grand_electromenager">Grand Électroménager</a></li>
+                    <li><a href="/cgv">CGV</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>

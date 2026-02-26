@@ -1,15 +1,10 @@
 <?php
+
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductController;
-
-Route::get('/', [ShopController::class,'index'])->name('home');
-
-Route::get('/categories',[ProductController::class,'categories'])->name('categories');
-
-Route::get('/categorie/{id}',[ProductController::class,'produits'])->name('categorie.produits');
-
-Route::get('/produit/{id}',[ProductController::class,'detail'])->name('produit.detail');
-
-Route::get('/contact',[ShopController::class,'contact'])->name('contact');
-
-Route::get('/cgv',[ShopController::class,'cgv'])->name('cgv');
+Route::get('/', [ShopController::class, "index"]);
+Route::get('/contact', [ShopController::class, "contact"]);
+Route::get('/cgv', [ShopController::class, "cgv"]);
+Route::get('/product/{id}', [ProductController::class, "product"]);
+Route::get('/categorie/{id}', [ProductController::class, "categorie"]);
